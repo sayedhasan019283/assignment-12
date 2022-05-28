@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDFZEw_QvBS3ABXlWNRZEXgum8lQ6l83xo",
-    authDomain: "perlic-tools.firebaseapp.com",
-    projectId: "perlic-tools",
-    storageBucket: "perlic-tools.appspot.com",
-    messagingSenderId: "289004774321",
-    appId: "1:289004774321:web:1afa54116308fd3c81d390"
+    apiKey: "AIzaSyCdn8UcMAa19XrFnS-DTrQAulZPC6rKcaU",
+    authDomain: "assignment-12-86f99.firebaseapp.com",
+    projectId: "assignment-12-86f99",
+    storageBucket: "assignment-12-86f99.appspot.com",
+    messagingSenderId: "501506981621",
+    appId: "1:501506981621:web:01424ce161cb1f3aaecfbc"
 };
 
 // Initialize Firebase
