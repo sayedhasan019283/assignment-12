@@ -32,7 +32,18 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.skybtn {
+  background-color: #00bbe4;
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+
+.skybtn:hover {
+  background-color: #2da5c0;
 }
