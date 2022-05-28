@@ -99,7 +99,7 @@ const Login = () => {
                                 {signInErrorMessage}
                                 <input className='btn btn-primary text-white w-full max-w-xs' type="submit" value='Login' />
                             </form>
-                            <p>New to doctors portal? <Link className='text-green-500' to="/signup">Create new Account</Link></p>
+                            <p>New to Parts Perches wholesaler? <Link className='text-green-500' to="/signup">Create new Account</Link></p>
                             <div className="divider">OR</div>
                             <button onClick={handleGoogle} className="btn btn-outline btn-primary">Continue with google</button>
                         </div>
