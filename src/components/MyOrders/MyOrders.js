@@ -12,12 +12,12 @@ const MyOrders = () => {
     const navigate = useNavigate()
     const [user] = useAuthState(auth)
     const email = user?.email
-    const { data: orders, isLoading, refetch } = useQuery('order', () => axios.get(`http://localhost:5000/order?email=${email}`))
+    const { data: orders, isLoading, refetch } = useQuery('order', () => axios.get(`https://obscure-beyond-65521.herokuapp.com/order?email=${email}`))
     if (isLoading) {
         return <Loading></Loading>
     }
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5000/order/${id}`).then(response => refetch())
+        axios.delete(`https://obscure-beyond-65521.herokuapp.com/order/${id}`).then(response => refetch())
     }
     const handlePayment = id => {
         navigate(`/checkout/${id}`)

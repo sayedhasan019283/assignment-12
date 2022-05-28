@@ -6,21 +6,21 @@ import { async } from '@firebase/util';
 import { toast } from 'react-toastify';
 
 const User = () => {
-    const { data: user, isLoading, refetch } = useQuery('all-user', async () => await axios.get('http://localhost:5000/all-user'))
+    const { data: user, isLoading, refetch } = useQuery('all-user', async () => await axios.get('https://obscure-beyond-65521.herokuapp.com/all-user'))
 
 
     if (isLoading) {
         return <Loading></Loading>
     }
     const makeAdmin = async (email, name) => {
-        await axios.put(`http://localhost:5000/user/admin/${email}`).then(response => console.log(response))
+        await axios.put(`https://obscure-beyond-65521.herokuapp.com/user/admin/${email}`).then(response => console.log(response))
         refetch()
         toast.success(` you approved ${name || email} as admin.`)
     }
     const users = user.data
 
     const handleDeleteUser = async (id) => {
-        await axios.delete(`http://localhost:5000/user/${id}`)
+        await axios.delete(`https://obscure-beyond-65521.herokuapp.com/user/${id}`)
         refetch()
         toast.success(`User Deleted`)
     }

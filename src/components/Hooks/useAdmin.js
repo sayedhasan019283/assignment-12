@@ -8,7 +8,7 @@ const useAdmin = (user) => {
         const email = user?.email
         console.log(email);
         if (email) {
-            axios.get(`http://localhost:5000/admin/${email}`).then(response => {
+            axios.get(`https://obscure-beyond-65521.herokuapp.com/admin/${email}`).then(response => {
                 setAdmin(response.data)
                 setAdminLoading(false)
             })

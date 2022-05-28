@@ -11,7 +11,7 @@ const AddProduct = () => {
         const available = e.target.availeable.value;
         const price = e.target.price.value;
         const img = e.target.img.value
-        axios.post('http://localhost:5000/parts', {
+        axios.post('https://obscure-beyond-65521.herokuapp.com/parts', {
             name, des, minimunOrder, available, price, img
         }).then(response => toast.success("item added"))
 

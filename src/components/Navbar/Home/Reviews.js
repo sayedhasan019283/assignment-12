@@ -6,7 +6,7 @@ import user from "../../../Assets/img/user.png"
 const Reviews = () => {
     const [reviews, setReviews] = useState([])
     useEffect(() => {
-        axios.get('http://localhost:5000/review', {
+        axios.get('https://obscure-beyond-65521.herokuapp.com/review', {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
             }

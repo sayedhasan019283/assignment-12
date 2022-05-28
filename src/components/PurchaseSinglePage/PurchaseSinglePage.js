@@ -14,7 +14,7 @@ const PurchaseSinglePage = () => {
     const [buttonDisabled, setButtonDisabled] = useState(false)
 
     const { id } = useParams()
-    const { data: product, isLoading, refetch } = useQuery(('parts', id), () => axios.get(`http://localhost:5000/parts/${id}`))
+    const { data: product, isLoading, refetch } = useQuery(('parts', id), () => axios.get(`https://obscure-beyond-65521.herokuapp.com/parts/${id}`))
     const products = product?.data
     useEffect(() => {
         const orderQantityMinimumParseInt = parseInt(product?.data.minimunOrder)
@@ -59,7 +59,7 @@ const PurchaseSinglePage = () => {
             name: product.data.name,
 
         }
-        axios.post('http://localhost:5000/order', order).then(response => {
+        axios.post('https://obscure-beyond-65521.herokuapp.com/order', order).then(response => {
 
             console.log(response.data);
         })
@@ -68,7 +68,7 @@ const PurchaseSinglePage = () => {
             available: newAvailableQuantity
         }
 
-        axios.put(`http://localhost:5000/parts/${id}`, doc).then(response => {
+        axios.put(`https://obscure-beyond-65521.herokuapp.com/parts/${id}`, doc).then(response => {
 
             refetch()
         })

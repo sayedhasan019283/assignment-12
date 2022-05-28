@@ -8,7 +8,7 @@ const useToken = user => {
 
         const currentUser = email
         if (email) {
-            axios.put(`http://localhost:5000/user/${email}`, currentUser).then(response => {
+            axios.put(`https://obscure-beyond-65521.herokuapp.com/user/${email}`, currentUser).then(response => {
                 setToken(response.data)
                 localStorage.setItem('accessToken', response.data)
 
